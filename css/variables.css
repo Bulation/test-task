@@ -1,0 +1,27 @@
+:root {
+  --header-logo-text-color: #A64533;
+  --header-text-color: #222222;
+  --header-bg-color: #F4F4F4;
+  --nav-bg-color: #222222;
+  --nav-text-color: #EC4545;
+  --nav-text-hover-color: #CCCCCC;
+  --btn-bg-color: #EC4545;
+  --number-color: #EC4545;
+  --text-dark-color: #444444;
+  --icon-text-color: #222222;
+  --border-color: #C4C4C4;
+  --form-bg-color: #A64533;
+  --form-text-color: #818181;
+  --partners-slider-text-color: #818181;
+  --production-bg-color: #CE3114;
+  --cooperation-text-color: #EC4545;
+  --partners-bg-color: #F4F4F4;
+  --circle-border-color: #E5E5E5;
+  --number-text-color: #F4F4F4;
+  --icon-site-color: #CCCCCC;
+  --icon-border-color: #DBDBDB;
+  --contacts-link-color: #333333;
+  --contacts-site-color: #EC4545;
+  --footer-bg-color: #444444;
+  --modal-bg-color: #F4F4F4;
+}

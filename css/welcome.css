@@ -1,0 +1,62 @@
+.carousel-welcome::before {
+  content: '';
+  display: block;
+  z-index: 2;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(50.39% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+.welcome-title {
+  font: 700 55px/73px Roboto;
+}
+.description-column {
+  position: relative;
+}
+.carousel-welcome .carousel-img {
+  height: 800px;
+  object-fit: cover;
+}
+.description {
+  position: absolute;
+  top: 196px;
+  z-index: 3;
+}
+.carousel-welcome .carousel-control-prev-icon {
+  background-image: url(../assets/svg/prev.svg);
+}
+.carousel-welcome .carousel-control-next-icon {
+  background-image: url(../assets/svg/next.svg);
+}
+.carousel-welcome .carousel-indicators .carousel-control-next, .carousel-welcome .carousel-indicators .carousel-control-prev {
+  width: 26px;
+  height: 10px;
+  position: static;
+  margin: 0 13px;
+  opacity: 1;
+  background-color: transparent;
+}
+.carousel-welcome .carousel-indicators .bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 1;
+}
+.carousel-welcome .carousel-indicators .active {
+  background-color: #EC4545;
+}
+.btn-welcome {
+  margin-top: 100px;
+}
+.btn-bid {
+  border-radius: 40px;
+  background-color: var(--btn-bg-color);
+  font: 400 24px/28px Roboto;
+}
+@media screen and (max-width: 768px) {
+  .welcome-title {
+    font: 700 30px/45px Roboto;
+  }
+}

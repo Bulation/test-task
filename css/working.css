@@ -1,0 +1,71 @@
+.working {
+  background: url(../assets/img/workingbg.png);
+}
+.circle-work {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--circle-border-color);
+  box-shadow: -1px 4px 4px 0px #0000001A;
+}
+.icon-whatsapp {
+  background: url(../assets/svg/whatsapp.svg) no-repeat center;
+}
+.icon-viber {
+  background: url(../assets/img/viber.png) no-repeat center;
+  background-size: 21px 21px;
+}
+.working-item {
+  position: relative;
+  z-index: 3;
+  box-shadow: 0px 0px 30px 0px #0000001A;
+  border-radius: 15px;
+  min-height: 177px;
+}
+.working-text {
+  position: relative;
+  z-index: 3;
+}
+.working-title {
+  margin: 80px 0 40px;
+  color: var(--text-dark-color);
+}
+.working-item-col {
+  position: relative;
+}
+.number {
+  position: absolute;
+  top: -30px;
+  right: 14px;
+  font: 900 144px/169px Roboto;
+  color: var(--number-text-color);
+}
+.icon-man {
+  background: url(../assets/img/man.png) no-repeat center;
+}
+.icon-image {
+  background: url(../assets/img/image.png) no-repeat center;
+}
+.icon-timer {
+  background: url(../assets/img/timer.png) no-repeat center;
+}
+.icon-painting {
+  background: url(../assets/img/painting.png) no-repeat center;
+}
+.icon-sewing {
+  background: url(../assets/img/sewing.png) no-repeat center;
+}
+.icon-smile {
+  background: url(../assets/img/smile.png) no-repeat center;
+}
+.btn-working {
+  margin: 44px 0 100px;
+}
+.working-item-icon {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  position: relative;
+  z-index: 5;
+  filter: invert(68%) sepia(90%) saturate(6976%) hue-rotate(340deg) brightness(101%) contrast(85%);
+}

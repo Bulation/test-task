@@ -47,25 +47,34 @@ function init() {
             controls: []
         }, {
           suppressMapOpenBlock: true,
+          autoFitToViewport: 'always',
           searchControlProvider: 'yandex#search'
         });
-
-    // Создаем геообъект с типом геометрии "Точка".
     let myGeoObject = new ymaps.GeoObject({
-            // Описание геометрии.
             geometry: {
                 type: "Point",
                 coordinates: [54.582105, 39.727724]
             },
-            // Свойства.
         }, {
-            // Опции.
-            // Иконка метки будет растягиваться под размер ее содержимого.
-            preset: 'islands#blackStretchyIcon',
-            // Метку можно перемещать.
+            preset: 'islands#blueFactoryIcon',
+            iconColor: '#0095b6'
         });
 
     myMap.geoObjects.add(myGeoObject);
-    document.querySelector('.ymaps-2-1-79-copyright').remove();
+    document.querySelector('.ymaps-2-1-79-copyright').style.display = 'none';
 }
 
+window.addEventListener('scroll', scrollFunction)
+function scrollFunction() {
+    if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+        document.querySelector(".myBtn").style.display = "block";
+    } else {
+        document.querySelector(".myBtn").style.display = "none";
+    }
+}
+
+document.querySelector(".myBtn").addEventListener('click', topFunction);
+function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+}

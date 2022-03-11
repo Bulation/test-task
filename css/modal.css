@@ -1,0 +1,28 @@
+.modal-dialog {
+  max-width: 657px;
+}
+.modal-title {
+  color: var(--text-dark-color);
+}
+.modal-header {
+  border: none;
+}
+.modal-body {
+  width: 66.666%;
+}
+.modal-check {
+  color: var(--text-dark-color);
+}
+.modal-content {
+  box-shadow: 0px 0px 42px 0px #00000040;
+  border-radius: 15px;
+  font: 400 20px/25px Roboto;
+  color: var(--form-text-color);
+  background: var(--modal-bg-color);
+}
+.modal-backdrop.show {
+  opacity: 0.3;
+}
+textarea {
+  resize: none;
+}

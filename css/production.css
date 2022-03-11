@@ -1,0 +1,86 @@
+.carousel-production .carousel-item.active {
+  display: flex;
+}
+.production {
+  background-image: url(../assets/img/formbg.png);
+  background-color: var(--production-bg-color);
+  background-blend-mode: overlay;
+}
+.production-container {
+  padding-bottom: 80px;
+}
+.production-border-top {
+  background: url(../assets/img/seam.png);
+  position: relative;
+  top: -8px;
+  height: 16px;
+}
+.production-border-bottom {
+  background: url(../assets/img/seam.png);
+  position: relative;
+  bottom: -8px;
+  height: 16px;
+}
+.production-title {
+  margin: 80px 0 44px;
+}
+.production-wrapper {
+  position: relative;
+}
+.swiper-button-next {
+  left: auto;
+  right: 0px;
+}
+.swiper-button-next::before {
+  content: '';
+  background-color: var(--border-color);
+  position: absolute;
+  top: 0px;
+  width: 6px;
+  height: 20px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.swiper-button-next::after {
+  content: '';
+  background-color: var(--border-color);
+  position: absolute;
+  top: 11px;
+  width: 6px;
+  height: 20px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.swiper-button-prev::before {
+  content: '';
+  background-color: var(--border-color);
+  position: absolute;
+  top: 0px;
+  width: 6px;
+  height: 20px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.swiper-button-prev::after {
+  content: '';
+  background-color: var(--border-color);
+  position: absolute;
+  top: 11px;
+  width: 6px;
+  height: 20px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.swiper-button-prev {
+  left: 0px;
+  right: auto;
+}
+.production-slide {
+  box-shadow: 0px 8px 10px 0px #03232C1A;
+}
+@media screen and (max-width: 420px) {
+  .production-title {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}

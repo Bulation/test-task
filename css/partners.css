@@ -1,0 +1,31 @@
+.partners {
+  background-color: var(--partners-bg-color);
+  padding-top: 80px;
+  color: var(--text-dark-color);
+}
+.partners-title {
+  color: var(--text-dark-color);
+}
+.partners-text {
+  font: 400 17px/24px Roboto;
+}
+.partners-wrapper {
+  position: relative;
+  color: var(--partners-slider-text-color);
+  font: 400 14px/16px Roboto;
+}
+.partners-slider-wrapper {
+  align-items: center;
+}
+.cooperation {
+  padding: 50px 0 100px;
+}
+.cooperation-title {
+  color: var(--text-dark-color);
+  font: 400 36px/42px Roboto;
+}
+.cooperation-item {
+  border-radius: 15px;
+  color: var(--cooperation-text-color);
+  font: 400 18px/21px Roboto;
+}

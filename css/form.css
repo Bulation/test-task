@@ -1,0 +1,23 @@
+.form {
+  background-image: url(../assets/img/formbg.png);
+  background-color: var(--form-bg-color);
+  background-blend-mode: overlay;
+}
+.form-title {
+  margin-top: 80px;
+}
+.form-text {
+  font: 400 20px/30px Roboto;
+  color: var(--form-text-color);
+}
+.form-control {
+  border-radius: 15px;
+  color: var(--form-text-color);
+  font: 400 16px/21px Roboto;
+}
+.form-check-label {
+  font: 400 14px/20px Roboto;
+}
+.btn-form {
+  margin-bottom: 100px;
+}
