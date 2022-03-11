@@ -18,8 +18,10 @@
   position: relative;
 }
 .myBtn {
+  display: none;
   border: none;
   position: fixed;
+  z-index: 10;
   bottom: 20px;
   right: 20px;
   width: 42px;
