@@ -14,21 +14,37 @@
 }
 
 :root {
-  --header-bg-color: #111111;
+  --section-bg-color: #111111;
   --dark-text-color: #000000;
   --light-text-color: #ffffff;
   --color-primary: #FCB500;
+  --color-primary-opacity: rgba(252, 181, 0, 0.7);
+  --old-text-color: #ADADAD;
+  --overlay-color: #29292999;
 }
 
+.body_overlay {
+  overflow: hidden;
+}
+
+.body_overlay::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-color);
+  z-index: 2;
+}
 .container {
   display: flex;
   max-width: 1440px;
-  padding: 0 64px;
   margin: 0 auto;
 }
 
 .header {
-  background-color: var(--header-bg-color);
+  background-color: var(--section-bg-color);
 }
 
 .header__container {
@@ -48,15 +64,22 @@
   align-items: center;
 }
 
+
+
 .navigation-list {
   display: flex;
-  gap: 40px;
+  gap: 45px;
 }
 
 .navigation-list__link {
   font: 400 18px/24px Rubik;
   color: var(--light-text-color);
   text-decoration: none;
+  transition: color 0.3s ease-in;
+}
+
+.navigation-list__link:hover {
+  color: var(--color-primary);
 }
 
 .basket {
@@ -88,22 +111,41 @@
 
 .burger {
   display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  z-index: 4;
+  position: relative;
+  transition: transform 0.3s ease-in;
+}
+
+.burger_active {
+  transform: rotate(90deg);
+}
+
+.burger__item {
+  display: block;
+  margin-bottom: 10px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--light-text-color);
 }
 
 .main-section {
-  background-image: url(../assets/mainbg.svg);
-  background-repeat: no-repeat;
-  background-color: var(--color-primary);
+  background: var(--color-primary-opacity) url(../assets/mainbg.svg) no-repeat;
 }
 
 .info {
+  position: relative;
   padding: 96px 64px;
 }
 
 .info__description {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 115px;
+  position: relative;
+  z-index: 2;
 }
 
 .immunity__title {
@@ -116,7 +158,7 @@
   color: var(--dark-text-color);
   font: 400 24px/28px Rubik;
   max-width: 650px;
-  margin-top: 24px;
+  margin-top: 30px;
 }
 
 .helping__text_strong {
@@ -129,12 +171,248 @@
   color: var(--dark-text-color);
   font: 400 18px/21px Rubik;
   max-width: 350px;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .info__background {
   width: 816px;
   height: 984px;
-  background: url(../assets/lemon.png) no-repeat center 533px 462px, url(../assets/nootris.png) no-repeat center 224px 635px, url(../assets/ginger.png) no-repeat center 496px 408px;
-  background-size: contain;
+  background: url(../assets/lemon.png) no-repeat bottom 130px left 40px / 533px 462px, url(../assets/nootris.png) no-repeat top 10px right 145px / 250px 635px, url(../assets/ginger.png) no-repeat bottom 355px right 65px / 496px 408px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+.discount-section {
+  background-color: var(--section-bg-color);
+}
+
+.discount {
+  display: block;
+  padding: 111px 64px;
+  color: var(--light-text-color);
+}
+
+.discount__title {
+  font: 700 48px/57px Rubik;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.discount__title_colored {
+  color: var(--color-primary);
+}
+
+.prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.prices__old-price {
+  width: 112px;
+  text-align: center;
+  color: var(--old-text-color);
+  font: 400 36px/43px Rubik;
+  position: relative;
+}
+
+.prices__old-price::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 112px;
+  height: 2px;
+  border-radius: 0.5px;
+  background-color: var(--old-text-color);
+}
+
+.prices__new-price {
+  font: 400 48px/57px Rubik;
+}
+
+.advantages {
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.discount__advantages {
+  margin: 10px auto 0;
+}
+
+.item {
+  text-align: center;
+  font: 400 18px/21px Rubik;
+}
+.item__img {
+  width: 193px;
+  max-width: 100%;
+  height: 160px;
+  object-fit: contain;
+}
+
+.item__info_colored {
+  color: var(--color-primary);
+}
+
+.nootris-img-container {
+  margin: -80px 0;
+  transform: rotate(-90deg);
+}
+
+.nootris-img {
+  width: 160px;
+  height: auto;
+  object-fit: unset;
+}
+
+.item__info {
+  margin-top: 78px;
+}
+
+.nootris-info {
+  margin-top: 0;
+  font: 400 36px/53px Rubik;
+}
+
+.nootris-info_colored {
+  font: 400 24px/28px Rubik;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 18px 56px;
+  text-align: center;
+  color: var(--dark-text-color);
+  font: 400 18px/21px Rubik;
+  background-color: var(--color-primary);
+}
+
+.discount__btn {
+  margin-top: 40px;
+}
+
+@keyframes navFromRight {
+  0% {
+    -webkit-transform: translate(100%);
+    transform: translate(100%);
+  }
+  
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes navToRight {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  100% {
+    -webkit-transform: translate(100%);
+    transform: translate(100%);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .navigation {
+    display: none;
+    transform: translateX(100%);
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark-text-color);
+  }
+  .burger {
+    display: block;
+  }
+  .navigation-list {
+    flex-direction: column;
+    width: 320px;
+    padding-top: 80px;
+    gap: 40px;
+  }
+  .navigation-list__item {
+    width: 243px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .immunity__title {
+    font: 700 72px/76px Rubik;
+  }
+  .info__background {
+    background: url(../assets/lemon.png) no-repeat bottom 470px left 400px / 233px 182px, 
+                url(../assets/nootris.png) no-repeat top 105px right 145px / 125px 335px, 
+                url(../assets/ginger.png) no-repeat bottom 555px right 100px / 248px 204px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__container {
+    padding: 24px;
+  }
+  .immunity__title {
+    font: 700 36px/38px Rubik;
+  }
+  .discount__title {
+    font: 700 20px/23px Rubik;
+    margin-bottom: 30px;
+  }
+  .discount {
+    padding: 35px;
+  }
+  .advantages {
+    flex-direction: column;
+    gap: 0;
+  }
+  .item__info {
+    margin-top: 30px;
+  }
+  .advantages__item {
+    margin-top: 30px;
+  }
+  .nootris-img {
+    width: 110px;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .info {
+    padding: 24px;
+  }
+  .info__description {
+    gap: 50px;
+  }
+  .info__background {
+    display: none;
+  }
+}
+.navigation_active {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: block;
+  -webkit-animation: navFromRight .3s ease-in;
+  animation: navFromRight .3s ease-in;
+  transform: translate(0);
+}
+
+.navigation_inactive {
+  display: block;
+  -webkit-animation: navToRight .3s ease-in;
+  animation: navToRight .3s ease-in;
 }

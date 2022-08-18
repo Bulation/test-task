@@ -31,10 +31,10 @@
           <li class="navigation-list__item">
             <a href="#exploring" class="navigation-list__link">Исследования</a>
           </li>
-          <li>
+          <li class="navigation-list__item">
             <a href="#lk" class="navigation-list__link">Личный кабинет</a>
           </li>
-          <li>
+          <li class="navigation-list__item">
             <a href="tel:888006000990" class="navigation-list__link">8 8 (800) 600-09-90</a>
           </li>
         </ul>
@@ -71,27 +71,34 @@
     <section class="discount-section">
       <div class="discount container">
         <h2 class="discount__title">Получи защиту иммунитета <br> <span class="discount__title_colored">со скидкой -15% первым!</span></h2>
-      </div>
-      <div class="prices">
-        <div class="prices__old-price">750₽</div>
-        <div class="prices__new-price">690₽</div>
-      </div>
-      <div class="advantages">
-        <div class="item advantages__item">
-          <img class="item__img"src="" alt="">
-          <div class="item__info">Содержит <br> <span class="item__info_colored">имбирь</span></div>
+        <div class="prices">
+          <div class="prices__old-price">750₽</div>
+          <div class="prices__new-price">690₽</div>
         </div>
-        <div class="item advantages__item">
-          <img class="item__img" src="" alt="">
-          <div class="item__info">+ Бесплатная доставка<br> <span class="item__info_colored">Специальная цена</span></div>
+        <div class="advantages discount__advantages">
+          <div class="item advantages__item">
+            <div class="item__img-container">
+              <img class="item__img" src="assets/ginger.png" alt="">
+            </div>
+            <div class="item__info">Содержит <br> <span class="item__info_colored">имбирь</span></div>
+          </div>
+          <div class="item advantages__item">
+            <div class="nootris-img-container item__img-container">
+              <img class="nootris-img item__img" src="assets/nootris.png" alt="">
+            </div>
+            <div class="nootris-info item__info">+ Бесплатная доставка<br> <span class="nootris-info_colored item__info_colored">Специальная цена</span></div>
+          </div>
+          <div class="item advantages__item">
+            <div class="item__img-container">
+              <img class="item__img" src="assets/virus.png" alt="">
+            </div>
+            <div class="item__info">Нейтрализует<br> <span class="item__info_colored">вирусы</span></div>
+          </div>
         </div>
-        <div class="item advantages__item">
-          <img class="item__img" src="" alt="">
-          <div class="item__info">Нейтрализует<br> <span class="item__info_colored">вирусы</span></div>
-        </div>
+        <button class="btn discount__btn" type="button">Оформить заказ!</button>
       </div>
-      <button class="btn discount__btn" type="button">Оформить заказ!</button>
     </section>
   </main>
+  <script src="js/index.js"></script>
 </body>
 </html>
