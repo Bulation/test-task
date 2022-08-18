@@ -1,5 +1,18 @@
 @import 'normalize.css';
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 :root {
   --header-bg-color: #111111;
   --dark-text-color: #000000;
@@ -24,6 +37,7 @@
 }
 
 .header__logo {
+  display: block;
   width: 120px;
   height: 35px;
   background: url(../assets/logo.svg) no-repeat;
@@ -74,4 +88,53 @@
 
 .burger {
   display: none;
+}
+
+.main-section {
+  background-image: url(../assets/mainbg.svg);
+  background-repeat: no-repeat;
+  background-color: var(--color-primary);
+}
+
+.info {
+  padding: 96px 64px;
+}
+
+.info__description {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.immunity__title {
+  text-transform: uppercase;
+  color: var(--light-text-color);
+  font: 700 144px/152px Rubik;
+}
+
+.immunity__text {
+  color: var(--dark-text-color);
+  font: 400 24px/28px Rubik;
+  max-width: 650px;
+  margin-top: 24px;
+}
+
+.helping__text_strong {
+  text-transform: uppercase;
+  color: var(--dark-text-color);
+  font: 700 36px/43px Rubik;
+}
+
+.helping__text {
+  color: var(--dark-text-color);
+  font: 400 18px/21px Rubik;
+  max-width: 350px;
+  margin-top: 16px;
+}
+
+.info__background {
+  width: 816px;
+  height: 984px;
+  background: url(../assets/lemon.png) no-repeat center 533px 462px, url(../assets/nootris.png) no-repeat center 224px 635px, url(../assets/ginger.png) no-repeat center 496px 408px;
+  background-size: contain;
 }
