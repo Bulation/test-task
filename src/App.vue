@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onErrorCaptured, ref } from 'vue';
+import { ErrorComponent } from './shared/error';
 const error = ref(false);
 
 onErrorCaptured(() => {

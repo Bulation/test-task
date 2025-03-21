@@ -1,6 +1,6 @@
 <template>
   <div class="error-block">
-    An error occurred while communicating with the server. Try to reload the page.
+    An error occurred. Try to reload the page.
   </div>
 </template>
 
