@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onErrorCaptured, ref } from 'vue';
+import { AccountManagementForm } from './features/account-management';
 import { ErrorComponent } from './shared/error';
 const error = ref(false);
 
@@ -11,6 +12,9 @@ onErrorCaptured(() => {
 <template>
   <div v-if="error">
     <ErrorComponent />
+  </div>
+  <div class="app-container">
+    <AccountManagementForm />
   </div>
 </template>
 
