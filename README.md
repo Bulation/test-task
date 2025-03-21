@@ -12,6 +12,10 @@
 
 Использована архитектура по методологии FSD (https://feature-sliced.github.io/documentation/)
 
+## Деплой
+
+https://bulation.github.io/test-task/
+
 ## Project Setup
 
 ```sh
