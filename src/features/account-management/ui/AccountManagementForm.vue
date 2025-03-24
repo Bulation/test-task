@@ -122,7 +122,7 @@ function validateFields(account: RawAccountData) {
         <div class="field-label">Пароль</div>
       </div>
 
-      <article v-for="account in rawAccountsData" :key="account.id" class="account-item">
+      <div v-for="account in rawAccountsData" :key="account.id" class="account-item">
         <div class="field" data-label="Метка">
           <input
             v-model="account.tagsInput"
@@ -172,7 +172,7 @@ function validateFields(account: RawAccountData) {
             Удалить
           </button>
         </div>
-      </article>
+      </div>
     </div>
 
     <div v-else class="no-accounts">
